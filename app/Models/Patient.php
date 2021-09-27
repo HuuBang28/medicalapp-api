@@ -50,7 +50,19 @@ class Patient extends Authenticatable
      *
      * @return void
      */
-    public function patients() {
+    public function counselors() {
         return $this->belongsToMany(Counselor::class);
+    }
+    public function counpons() {
+        return $this->hasMany(Coupon::class);
+    }
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
+    public function feedback() {
+        return $this->hasMany(Feedback::class);
+    }
+    public function orders() {
+        return $this->hasMany(Order::class);
     }
 }

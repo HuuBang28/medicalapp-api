@@ -46,12 +46,17 @@ class Counselor extends Authenticatable
     ];
         
     /**
-     * Has Many Relation - Eloquent Relation for Patients
+     * Belongs To Many Relation - Eloquent Relation for Patients
      *
      * @return void
      */
     public function patients() {
-        return $this->hasMany(Patient::class);
+        return $this->belongsToMany(Patient::class);
     }
-
+    public function feedback() {
+        return $this->hasMany(Feedback::class);
+    }
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
 }
