@@ -9,7 +9,7 @@
 -   First of all, copy `.env.example` to your `.env`
 -   Migrate with the following command:
     > php artisan migrate
-    > If you already have your own database, please do:
+-   If you already had your own database, please do:
     > php artisan migrate:refresh
 -   You also need to re-install your php passport
     > php artisan passport:install
@@ -37,4 +37,5 @@
 -   routes
     -   api.php
 -   .env
-(API samples be mentioned in `api.php`)
+
+**API samples will be mentioned in `api.php`**
